@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="submit.php">
+    <style>
+       body {
+          background-color:white;
+          margin: auto;
+          text-align: center;
+          width: 900px;
+          height: 50px;  
+          padding-top: 50px;
+          padding-right: 30px;
+          padding-bottom: 50px;
+          padding-left: 80px;
+        }
+        h3{
+        color: black;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 22px;
+        padding: 10px;
+        text-align: center;
+        }
+
+        h1{
+        color: black;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 22px;
+        padding: 0px;
+        text-align: center;
+        }
+
+        p{
+            background-position: center;
+            text-align: center;
+            font-size: 18px;
+            padding: 10px;
+            line-height: 30px;
+        }
+        
+        </style>
+ <!--------CONTACTS-------> 
+ <section id="contact">
+    <h2>Contact Us</h2>
+    <p>For inquiries, please fill out the form below:</p>
+    <!-- Add a contact form -->
+    <form action="submit_form.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>    
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get form data
+        const formData = new FormData(contactForm);
+
+        // Send form data to PHP script using Fetch API
+        fetch('submit_form.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Display success message or redirect to a thank-you page
+                alert('Message sent successfully!');
+                contactForm.reset(); // Clear the form
+            } else {
+                alert('Error sending message. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        });
+    });
+});
+
+</script>
+        
+

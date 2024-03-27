@@ -1,0 +1,46 @@
+<section class ="INDICATOR">  
+                    <div class="row">
+                        <div class = indicator-col">
+                            <div>
+                                <h3>INDICATORS.</h3>
+                                <p></p>
+                            </div>
+                        </div>
+
+
+                        <footer>
+                            <p>&copy; 2024 Baki's Gym. All rights reserved.</p>
+                        </footer>
+          
+                        /* Footer styles */
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+}
+
+div class="sidebar">
+<div class="sidebar-header">
+    <span>Menu</span>
+    <button class="close-btn">&times;</button>
+</div>
+<ul class="menu-items">
+   > <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="#"><i class="fas fa-user"</i> Profile</a></li>
+    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+    <!-- Moved "Logout" item to the bottom -->
+<li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+</ul>
+</div>
+
+<div class="content">  
+    <button class="open-btn">&#9776;</button>
+    <!-- Your main content goes here -->
+</div>
+
+<footer>
+    <p>&copy; 2024 My Gym. All rights reserved.</p>
+</footer>
+

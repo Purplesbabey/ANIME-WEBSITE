@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIME WEBSITE </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="servics.html">
+    <link rel="stylesheet" href="schedule.html">
+    <link rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="contact.html">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+        <header>
+            <!-- Your header content -->
+        </header>
+    
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#membership"><i class="fas fa-users"></i> Membership</a></li>
+        <li><a href="#classes"><i class="fas fa-dumbbell"></i> Classes</a></li>
+        <li><a href="#trainers"><i class="fas fa-user-tie"></i> Trainers</a></li>
+        <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
+    </ul>
+        </aside>
+    
+        <main>
+            <!-- Your main content sections -->
+        </main>
+    
+        
+        <!-- Add your JavaScript scripts here -->
+        <script src="scripts.js"></script>
+    </body>
+    
+
+    <main>
+        <section id="home">
+            <!-- Home section content -->
+        </section>
+
+        <section id="about">
+            <!-- About Us section content -->
+        </section>
+
+        <section id="services">
+            <!-- Services section content -->
+        </section>
+
+        <section id="schedule">
+            <!-- Schedule section content -->
+        </section>
+
+        <section id="contact">
+            <!-- Contact Us section content -->
+        </section>
+
+        <section id="membership">
+            <!-- Membership section content -->
+        </section>
+
+        <section id="classes">
+            <!-- Classes section content -->
+        </section>
+
+        <section id="trainers">
+            <!-- Trainers section content -->
+        </section>
+
+        <section id="testimonials">
+            <!-- Testimonials section content -->
+        </section>
+    </main>
+
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script >
+document.addEventListener('DOMContentLoaded', function() {
+    const openBtn = document.querySelector('.open-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    const sidebar = document.querySelector('.sidebar');
+
+    openBtn.addEventListener('click', function() {
+        sidebar.style.width = '250px';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        sidebar.style.width = '0';
+    });
+});
+
+// Add active class to clicked menu item
+const menuItems = document.querySelectorAll('.sidebar ul li a');
+
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    menuItems.forEach(item => item.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+
+
+    </script>
+
+   
+</body>
+
+
+</html>
